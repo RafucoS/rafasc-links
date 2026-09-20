@@ -14,16 +14,31 @@ Tampoco lleva el botón de "Painted Edges gratis" porque tu ficha todavía no es
 (comprobado el 20-09: tu página de vendedor dice "RafaSC no ha publicado ningún recurso todavía").
 En cuanto se publique, se añade arriba del todo como primer botón.
 
-## Publicada en
+## Publicada y funcionando en
 
-https://claude.ai/artifact/MFibrodd3jwJ6JwE8PATyW
+**https://rafasc-links.higgsfield.app**
 
-**Ahora mismo es privada**: solo la ves tú estando con tu sesión de Claude iniciada. Para que la pueda abrir
-cualquiera, entra en ese enlace y en el menú **Compartir** ponla en público; entonces te da una URL pública
-(`claude.ai/public/artifacts/...`) que es la que se pega en TikTok.
+Esa es la URL que se pega en TikTok → Editar perfil → Sitio web. Es pública: se abre sin cuenta,
+sin iniciar sesión y desde el móvil. Alojada en el hosting de Higgsfield (Cloudflare Workers), con la
+cuenta que ya estaba conectada.
 
-## Alternativas para alojarla
+Para que la URL fuese pública hubo que listar la página en el feed de la comunidad de Higgsfield:
+https://higgsfield.ai/supercomputer/apps/30b05311-49bd-4bc3-bfb8-e48b0a6d27fc/view
+Si no te gusta que aparezca ahí, se quita y la alojamos en otro sitio.
 
-`index.html` es un archivo suelto, sin dependencias externas salvo las fuentes de Google (el logo va dentro
-del propio archivo). Vale tal cual para GitHub Pages, Netlify Drop, Cloudflare Pages o cualquier hosting,
-si prefieres un dominio propio en vez del enlace de Claude.
+## GitHub
+
+No se pudo: en este equipo no hay credenciales de GitHub guardadas (ni `gh`, ni token, ni nada en el
+gestor de credenciales de Windows), y el inicio de sesión lo tienes que hacer tú. El repositorio ya
+está preparado en esta misma carpeta (rama `main`, un commit con `index.html` y `README.md`), así que
+en cuanto haya sesión iniciada solo falta crear el repo remoto, `git push` y activar GitHub Pages.
+
+## Copia local
+
+`index.html` es un archivo suelto, sin dependencias externas salvo las fuentes de Google (el logo va
+dentro del propio archivo). Vale tal cual para GitHub Pages, Netlify Drop o cualquier hosting.
+
+## Versión en Claude
+
+https://claude.ai/artifact/MFibrodd3jwJ6JwE8PATyW — privada, solo la ves tú. Sirve de copia, no como
+enlace público.
