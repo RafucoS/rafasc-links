@@ -16,7 +16,15 @@ En cuanto se publique, se añade arriba del todo como primer botón.
 
 ## Publicada y funcionando en
 
-**https://rafasc-links.higgsfield.app**
+**https://rafucos.github.io/rafasc-links/**  (GitHub Pages, sin marcas de agua)
+
+Repositorio: https://github.com/RafucoS/rafasc-links (rama `main`, carpeta raíz).
+Para cambiar la página: editar `index.html`, `git commit` y `git push`; Pages se actualiza solo en 1-2 min.
+
+### Copia anterior en Higgsfield (descartada)
+
+https://rafasc-links.higgsfield.app — sigue en pie, pero lleva la insignia "Made in Higgsfield" que
+inyecta su servidor y está listada en su feed de comunidad. No se usa.
 
 Esa es la URL que se pega en TikTok → Editar perfil → Sitio web. Es pública: se abre sin cuenta,
 sin iniciar sesión y desde el móvil. Alojada en el hosting de Higgsfield (Cloudflare Workers), con la
@@ -26,12 +34,11 @@ Para que la URL fuese pública hubo que listar la página en el feed de la comun
 https://higgsfield.ai/supercomputer/apps/30b05311-49bd-4bc3-bfb8-e48b0a6d27fc/view
 Si no te gusta que aparezca ahí, se quita y la alojamos en otro sitio.
 
-## GitHub
+## Nota técnica
 
-No se pudo: en este equipo no hay credenciales de GitHub guardadas (ni `gh`, ni token, ni nada en el
-gestor de credenciales de Windows), y el inicio de sesión lo tienes que hacer tú. El repositorio ya
-está preparado en esta misma carpeta (rama `main`, un commit con `index.html` y `README.md`), así que
-en cuanto haya sesión iniciada solo falta crear el repo remoto, `git push` y activar GitHub Pages.
+El `git push` fallaba con "could not read Username": el shell no tiene terminal (`/dev/tty`) y el Git
+Credential Manager no podía preguntar. Se arregla forzando su ventana gráfica:
+`GCM_GUI_PROMPT=1 GCM_INTERACTIVE=always git push`.
 
 ## Copia local
 
