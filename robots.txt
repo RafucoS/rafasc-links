@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /go/
+Sitemap: https://rafucos.github.io/rafasc-links/sitemap.xml
