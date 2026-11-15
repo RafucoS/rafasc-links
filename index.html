@@ -66,7 +66,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nav .btn{min-height:40px;padding:0 18px;font-size:15px}
 
 /* ---------- escenario ---------- */
-.stage{position:relative;margin-top:14px;height:clamp(540px,calc(100svh - 128px),900px);border-radius:32px;overflow:hidden;background:var(--ink);isolation:isolate}
+.stage{position:relative;margin-top:14px;aspect-ratio:32/15;min-height:460px;border-radius:32px;overflow:hidden;background:var(--ink);isolation:isolate}
 .screen{position:absolute;inset:0}
 .screen img,.screen video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .screen video{opacity:0;transition:opacity .7s ease}
@@ -177,8 +177,9 @@ dialog.lb::backdrop{background:rgba(5,10,28,.88);backdrop-filter:blur(6px)}
 
 /* ---------- reseñas ---------- */
 h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);margin-bottom:.35em}
-.quotes{columns:3;column-gap:16px}
-.q{break-inside:avoid;margin:0 0 16px;padding:22px 24px;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+@media (min-width:1101px){.q:nth-child(1){grid-column:3;grid-row:1}.q:nth-child(2){grid-column:1;grid-row:1 / span 2}.q:nth-child(3){grid-column:2;grid-row:1}.q:nth-child(4){grid-column:3;grid-row:2}.q:nth-child(5){grid-column:2;grid-row:2}}
+.q{margin:0;padding:22px 24px;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
 .q .stars{color:var(--lime);letter-spacing:3px;font-size:17px}
 .q blockquote{margin:10px 0 14px;font-family:var(--display);font-weight:500;font-size:clamp(19px,1.65vw,25px);line-height:1.22;letter-spacing:-.012em}
 .q .tr{margin:-4px 0 14px;font-size:15px;color:var(--muted)}
@@ -241,14 +242,14 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
   }
 }
 
-@media (max-width:1100px){.quotes{columns:2}}
+@media (max-width:1100px){.quotes{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* ---------- móvil ---------- */
 @media (max-width:860px){
   .nav ul{display:none}
   .nav .btn{margin-left:auto}
-  .stage{height:auto;overflow:visible;background:none;border-radius:0;isolation:auto}
+  .stage{height:auto;aspect-ratio:auto;min-height:0;overflow:visible;background:none;border-radius:0;isolation:auto}
   .stage::after{display:none}
-  .screen{position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+  .screen{position:relative;aspect-ratio:32/15;border-radius:24px;overflow:hidden;background:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
   .hello,.now,.tabs{position:static}
   .hello{margin:18px 0 10px;color:var(--muted)}
   .name{font-size:clamp(44px,13.5vw,72px)}
@@ -262,13 +263,17 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
   .shot.big{grid-column:span 2;grid-row:auto;aspect-ratio:16/9;border-radius:18px}
   .shot span{padding:30px 10px 8px}
   .shot i{display:none}
+  .gallery:not(.filtered) .shot:nth-child(-n+3){grid-column:span 2}
   .under{grid-template-columns:1fr;padding:12px 12px 22px;border-radius:24px}
   .under>div:last-child{padding:0 8px}
-  .quotes{columns:1}
+  .quotes{grid-template-columns:1fr}
   .hire{grid-template-columns:1fr;border-radius:24px}
   .gigs{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
   .foot a{margin:0 16px 0 0}
+  .now .btn-ghost{display:none}
+  .dock{transform:translateY(110%);transition:transform .35s var(--ease)}
+  .dock.on{transform:none}
   .dock{display:flex;position:fixed;z-index:35;left:0;right:0;bottom:0;gap:10px;
     padding:10px var(--gr) calc(10px + env(safe-area-inset-bottom,0px)) var(--gl);background:linear-gradient(to top,var(--deep) 55%,rgba(10,19,48,0))}
   .dock .btn{flex:1;min-width:0;padding:0 12px}
@@ -302,16 +307,16 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
     <p class="name" id="name">Stylized Water</p>
     <p class="line in" style="--d:4" id="line">No textures, 6 presets, spline river, waterfall and floating objects. Drop a plane, pick a preset, done.</p>
     <div class="act in" style="--d:5" id="act">
-      <span class="price" id="price">32,33 €</span>
+      <span class="price" id="price">€32.33</span>
       <a class="btn btn-lime mag" id="buy" href="go/web-hero/stylized_water/">Get it on Fab</a>
       <a class="btn btn-ghost" href="go/web-hero/fiverr/">Hire me for props &amp; worlds</a>
     </div>
   </div>
   <div class="tabs in" style="--d:6" role="tablist" aria-label="Choose a material" id="tabs">
-    <button class="tab" role="tab" aria-selected="true" data-k="water"><b>Stylized Water</b><small>32,33 €</small></button>
-    <button class="tab" role="tab" aria-selected="false" data-k="seethrough"><b>See-Through</b><small>13,99 €</small></button>
-    <button class="tab" role="tab" aria-selected="false" data-k="toonstudio"><b>Toon Studio</b><small>32,33 € · <span class="free">Lite free</span></small></button>
-    <button class="tab" role="tab" aria-selected="false" data-k="coverage"><b>Snow &amp; Moss</b><small>16,15 €</small></button>
+    <button class="tab" role="tab" aria-selected="true" data-k="water"><b>Stylized Water</b><small>€32.33</small></button>
+    <button class="tab" role="tab" aria-selected="false" data-k="seethrough"><b>See-Through</b><small>€13.99</small></button>
+    <button class="tab" role="tab" aria-selected="false" data-k="toonstudio"><b>Toon Studio</b><small>€32.33 · <span class="free">Lite free</span></small></button>
+    <button class="tab" role="tab" aria-selected="false" data-k="coverage"><b>Snow &amp; Moss</b><small>€16.15</small></button>
     <button class="tab" role="tab" aria-selected="false" data-k="edges"><b>Painted Edges</b><small class="free">Free</small></button>
   </div>
 </section>
@@ -334,7 +339,7 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
         <h3>Stylized Water</h3>
         <p>Stylized water shader for UE 5.8. Drop a plane, pick a preset, done.</p>
         <ul class="facts"><li>No textures</li><li>6 presets</li><li>Spline river</li><li>Waterfall</li><li>Floating objects</li></ul>
-        <div class="buy"><span class="price">32,33 €</span><a class="btn btn-lime mag" href="go/web-materiales/stylized_water/">Get it on Fab</a><a class="btn btn-ghost" href="v2/stylized-water/">Details &amp; FAQ</a></div>
+        <div class="buy"><span class="price">€32.33</span><a class="btn btn-lime mag" href="go/web-materiales/stylized_water/">Get it on Fab</a><a class="btn btn-ghost" href="v2/stylized-water/">Details &amp; FAQ</a></div>
       </div>
     </article>
 
@@ -350,7 +355,7 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
         <h3>See-Through Occlusion</h3>
         <p>See your character through walls, roofs and trees. Drag the handle to compare.</p>
         <ul class="facts"><li>One Material Function</li><li>Floors and shadows stay</li><li>Zoom and third person</li><li>Party of 4</li></ul>
-        <div class="buy"><span class="price">13,99 €</span><a class="btn btn-lime mag" href="go/web-materiales/see_through/">Get it on Fab</a><a class="btn btn-ghost" href="v2/see-through/">Details &amp; FAQ</a></div>
+        <div class="buy"><span class="price">€13.99</span><a class="btn btn-lime mag" href="go/web-materiales/see_through/">Get it on Fab</a><a class="btn btn-ghost" href="v2/see-through/">Details &amp; FAQ</a></div>
       </div>
     </article>
 
@@ -360,17 +365,17 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
         <h3>Custom Toon Shaders Studio</h3>
         <p>Toon, anime, comic and painterly post process styles. Mix any effect and save your own preset.</p>
         <ul class="facts"><li class="hot">Lite version free</li><li>One actor</li><li>13 styles</li><li>Outline and shadow colors</li></ul>
-        <div class="buy"><span class="price">32,33 €</span><a class="btn btn-lime mag" href="go/web-materiales/toon_studio/">Get it on Fab</a><a class="btn btn-ghost" href="v2/toon-studio/">Details &amp; FAQ</a><a class="btn btn-ghost" href="go/web-materiales/toon_lite/">Try Lite free</a></div>
+        <div class="buy"><span class="price">€32.33</span><a class="btn btn-lime mag" href="go/web-materiales/toon_studio/">Get it on Fab</a><a class="btn btn-ghost" href="v2/toon-studio/">Details &amp; FAQ</a><a class="btn btn-ghost" href="go/web-materiales/toon_lite/">Try Lite free</a></div>
       </div>
     </article>
 
     <article class="card" style="--i:3">
       <div class="media" data-v="coverage"><img src="v2/media/coverage.webp" alt="Snow and Moss Coverage: winter arrives on a log cabin" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
       <div>
-        <h3>Stylized Snow &amp; Moss Coverage</h3>
+        <h3>Snow &amp; Moss Coverage</h3>
         <p>Painted snow, moss, autumn leaves, sand and frost on top of any material.</p>
         <ul class="facts"><li>Real volume</li><li>Runtime weather</li><li>Melt zones follow your actors</li></ul>
-        <div class="buy"><span class="price">16,15 €</span><a class="btn btn-lime mag" href="go/web-materiales/coverage/">Get it on Fab</a><a class="btn btn-ghost" href="v2/coverage/">Details &amp; FAQ</a></div>
+        <div class="buy"><span class="price">€16.15</span><a class="btn btn-lime mag" href="go/web-materiales/coverage/">Get it on Fab</a><a class="btn btn-ghost" href="v2/coverage/">Details &amp; FAQ</a></div>
       </div>
     </article>
 
@@ -518,10 +523,10 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
   const M = 'v2/media/', S = small ? '_m' : '';           // en móvil, clips de 960 px; en escritorio, 1600 px
   const GO = 'go/web-hero/';
   const P = {
-    water:{n:'Stylized Water', l:'No textures, 6 presets, spline river, waterfall and floating objects. Drop a plane, pick a preset, done.', p:'32,33 €', c:'Get it on Fab', h:'stylized_water'},
-    seethrough:{n:'See-Through', l:'See your character through walls, roofs and trees with one Material Function. Floors and shadows stay.', p:'13,99 €', c:'Get it on Fab', h:'see_through'},
-    toonstudio:{n:'Toon Studio', l:'One actor, 13 toon, anime, comic and painterly styles. Mix effects, set outline and shadow colors, save your preset.', p:'32,33 €', c:'Get it on Fab', h:'toon_studio'},
-    coverage:{n:'Snow & Moss', l:'Painted snow, moss, autumn leaves, sand and frost on top of any material, with real volume and runtime weather.', p:'16,15 €', c:'Get it on Fab', h:'coverage'},
+    water:{n:'Stylized Water', l:'No textures, 6 presets, spline river, waterfall and floating objects. Drop a plane, pick a preset, done.', p:'€32.33', c:'Get it on Fab', h:'stylized_water'},
+    seethrough:{n:'See-Through', l:'See your character through walls, roofs and trees with one Material Function. Floors and shadows stay.', p:'€13.99', c:'Get it on Fab', h:'see_through'},
+    toonstudio:{n:'Toon Studio', l:'One actor, 13 toon, anime, comic and painterly styles. Mix effects, set outline and shadow colors, save your preset.', p:'€32.33', c:'Get it on Fab', h:'toon_studio'},
+    coverage:{n:'Snow & Moss', l:'Painted snow, moss, autumn leaves, sand and frost on top of any material, with real volume and runtime weather.', p:'€16.15', c:'Get it on Fab', h:'coverage'},
     edges:{n:'Painted Edges', l:'Hand-painted edges on any mesh as a drop-in Material Function. No UVs, no textures, no baking.', p:'Free', c:'Get it free on Fab', h:'painted_edges'}
   };
   const $ = id => document.getElementById(id);
@@ -575,6 +580,8 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
   });
   const hold = () => { const v = vids[front]; if (light || !v.src) return; (visible && !document.hidden) ? v.play().catch(() => {}) : v.pause(); };
   new IntersectionObserver(es => { visible = es[0].isIntersecting; hold(); }, {threshold:.15}).observe(stage);
+  const dock = document.querySelector('.dock');                                   // la barra fija aparece cuando el escenario sale de pantalla
+  new IntersectionObserver(es => dock.classList.toggle('on', !es[0].isIntersecting), {threshold:0}).observe(stage);
   document.addEventListener('visibilitychange', hold);
   show(0, true);
 
