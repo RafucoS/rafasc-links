@@ -279,6 +279,10 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
   .dock .btn{flex:1;min-width:0;padding:0 12px}
   body{padding-bottom:76px}
 }
+.guides{padding-top:clamp(64px,9vw,130px)}.guides-list{list-style:none;padding:0;margin:26px 0 20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.guides-list a{display:block;padding:15px 0;border-top:1px solid var(--line);text-decoration:none;font-family:var(--display);font-weight:500;font-size:clamp(18px,1.6vw,22px);line-height:1.2}
+.guides-list a:hover{color:var(--lime)}.guides-all{color:var(--lime);font-weight:600;text-underline-offset:4px}
+@media (max-width:760px){.guides-list{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -287,6 +291,7 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
   <a class="brand" href="#top"><img src="v2/media/logo.webp" alt="" width="34" height="34">RafaSC</a>
   <ul>
     <li><a href="#materials">Materials</a></li>
+    <li><a href="guides/">Guides</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#about">About</a></li>
@@ -334,7 +339,7 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
 
   <div class="stack">
     <article class="card" style="--i:0">
-      <div class="media" data-v="water2"><img src="v2/media/water2.webp" alt="Stylized Water: the same island with different water presets" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
+      <div class="media" data-v="water2"><img src="v2/media/water2.webp" srcset="v2/media/water2_m.webp 960w, v2/media/water2.webp 1600w" sizes="(max-width:860px) 92vw, 46vw" alt="Stylized Water: the same island with different water presets" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
       <div>
         <h3>Stylized Water</h3>
         <p>Stylized water shader for UE 5.8. Drop a plane, pick a preset, done.</p>
@@ -360,7 +365,7 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
     </article>
 
     <article class="card" style="--i:2">
-      <div class="media" data-v="toonstudio"><img src="v2/media/toonstudio.webp" alt="Toon Studio: a tea house switching between toon styles" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
+      <div class="media" data-v="toonstudio"><img src="v2/media/toonstudio.webp" srcset="v2/media/toonstudio_m.webp 960w, v2/media/toonstudio.webp 1600w" sizes="(max-width:860px) 92vw, 46vw" alt="Toon Studio: a tea house switching between toon styles" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
       <div>
         <h3>Custom Toon Shaders Studio</h3>
         <p>Toon, anime, comic and painterly post process styles. Mix any effect and save your own preset.</p>
@@ -370,7 +375,7 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
     </article>
 
     <article class="card" style="--i:3">
-      <div class="media" data-v="coverage"><img src="v2/media/coverage.webp" alt="Snow and Moss Coverage: winter arrives on a log cabin" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
+      <div class="media" data-v="coverage"><img src="v2/media/coverage.webp" srcset="v2/media/coverage_m.webp 960w, v2/media/coverage.webp 1600w" sizes="(max-width:860px) 92vw, 46vw" alt="Snow and Moss Coverage: winter arrives on a log cabin" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
       <div>
         <h3>Snow &amp; Moss Coverage</h3>
         <p>Painted snow, moss, autumn leaves, sand and frost on top of any material.</p>
@@ -380,7 +385,7 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
     </article>
 
     <article class="card" style="--i:4">
-      <div class="media" data-v="edges"><img src="v2/media/edges.webp" alt="Painted Edges: painted edges growing on a shelf as the width changes" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
+      <div class="media" data-v="edges"><img src="v2/media/edges.webp" srcset="v2/media/edges_m.webp 960w, v2/media/edges.webp 1600w" sizes="(max-width:860px) 92vw, 46vw" alt="Painted Edges: painted edges growing on a shelf as the width changes" loading="lazy" width="1600" height="750"><video muted playsinline loop preload="none" aria-hidden="true"></video></div>
       <div>
         <h3>Painted Edges Shader</h3>
         <p>Hand-painted edges on any mesh, as a drop-in Material Function.</p>
@@ -473,6 +478,21 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
 </section>
 </div>
 
+<section class="guides wrap" id="guides" aria-labelledby="h2g">
+  <h2 id="h2g">Guides</h2>
+  <ul class="guides-list">
+    <li><a href="guides/stylized-water-ue5/">How to Make Stylized Water in Unreal Engine 5</a></li>
+    <li><a href="guides/see-player-through-walls-unreal/">See the Player Through Walls in Unreal Engine 5</a></li>
+    <li><a href="guides/free-toon-shader-unreal-engine-5-8/">Free Toon Shader for Unreal Engine 5.8: Setup</a></li>
+    <li><a href="guides/ue-5-8-toon-shader-vs-post-process/">UE 5.8 Toon Shader vs Post-Process Toon: Which One?</a></li>
+    <li><a href="guides/snow-moss-on-any-mesh-ue5/">Add Snow or Moss on Top of Any Mesh in UE5</a></li>
+    <li><a href="guides/hand-painted-edge-wear-ue5/">Hand-Painted Edge Wear in UE5 Without Baking</a></li>
+    <li><a href="guides/cel-shader-post-process-ue5/">Cel Shading With a Post Process in UE5 Explained</a></li>
+    <li><a href="guides/free-ue5-materials/">Free UE5 Materials: Painted Edges and a Toon Shader</a></li>
+  </ul>
+  <a class="guides-all" href="guides/">All Unreal Engine 5 guides</a>
+</section>
+
 <section class="about wrap" id="about" aria-labelledby="h2a">
   <div class="about-grid">
     <div>
@@ -508,7 +528,7 @@ h2 .stars{display:block;font-size:.34em;letter-spacing:.12em;color:var(--lime);m
 </dialog>
 </main>
 
-<footer class="wrap"><div class="foot"><span>RafaSC · stylized materials and 3D art · Barcelona</span><span><a href="https://www.youtube.com/@RafaSC00">YouTube</a><a href="https://www.tiktok.com/@rafasc.gamedev">TikTok</a><a href="https://www.instagram.com/rafasc.gamedev/">Instagram</a><a href="https://x.com/RafaSCgamedev">X</a><a href="https://bsky.app/profile/rafasc-gamedev.bsky.social">Bluesky</a><a href="https://www.artstation.com/rafa_sc">ArtStation</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span></div></footer>
+<footer class="wrap"><div class="foot"><span>RafaSC · stylized materials and 3D art · Barcelona</span><span><a href="https://www.youtube.com/@RafaSC00">YouTube</a><a href="https://www.tiktok.com/@rafasc.gamedev">TikTok</a><a href="https://www.instagram.com/rafasc.gamedev/">Instagram</a><a href="https://x.com/RafaSCgamedev">X</a><a href="https://bsky.app/profile/rafasc-gamedev.bsky.social">Bluesky</a><a href="https://www.artstation.com/rafa_sc">ArtStation</a><a href="guides/">Guides</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span></div></footer>
 
 <div class="dock">
   <a class="btn btn-lime" href="go/web-hero/tienda/">Materials on Fab</a>

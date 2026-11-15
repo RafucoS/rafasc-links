@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Free UE5 Materials: Painted Edges and a Toon Shader | RafaSC</title>
+<meta name="description" content="Two free Unreal Engine 5 packs on Fab by RafaSC: Painted Edges (edge shader, no UVs or textures) and Toon Studio Lite (toon shader, 3 looks).">
+<link rel="canonical" href="https://rafucos.github.io/rafasc-links/guides/free-ue5-materials/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article"><meta property="og:site_name" content="RafaSC">
+<meta property="og:title" content="Free UE5 Materials: Painted Edges and a Toon Shader | RafaSC"><meta property="og:description" content="Two free Unreal Engine 5 packs on Fab by RafaSC: Painted Edges (edge shader, no UVs or textures) and Toon Studio Lite (toon shader, 3 looks).">
+<meta property="og:url" content="https://rafucos.github.io/rafasc-links/guides/free-ue5-materials/"><meta property="og:image" content="https://rafucos.github.io/rafasc-links/guides/img/og-free-ue5-materials.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Free UE5 materials: a painted edge shader and a toon shader">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Free UE5 Materials: Painted Edges and a Toon Shader | RafaSC">
+<meta name="twitter:description" content="Two free Unreal Engine 5 packs on Fab by RafaSC: Painted Edges (edge shader, no UVs or textures) and Toon Studio Lite (toon shader, 3 looks)."><meta name="twitter:image" content="https://rafucos.github.io/rafasc-links/guides/img/og-free-ue5-materials.jpg">
+<link rel="icon" type="image/png" href="../../v2/media/favicon.png"><link rel="apple-touch-icon" href="../../v2/media/apple-touch-icon.png">
+<meta name="theme-color" content="#0A1330">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://rafucos.github.io/rafasc-links/guides/free-ue5-materials/#article","headline":"Free UE5 materials: a painted edge shader and a toon shader","description":"Two free Unreal Engine 5 packs on Fab by RafaSC: Painted Edges (edge shader, no UVs or textures) and Toon Studio Lite (toon shader, 3 looks).","image":["https://rafucos.github.io/rafasc-links/guides/img/og-free-ue5-materials.jpg","https://rafucos.github.io/rafasc-links/guides/img/ue5-painted-edges-shader-before-after-1280.webp","https://rafucos.github.io/rafasc-links/guides/img/free-toon-shader-unreal-engine-5-three-looks-1280.webp"],"datePublished":"2026-11-15","dateModified":"2026-11-15","inLanguage":"en","mainEntityOfPage":"https://rafucos.github.io/rafasc-links/guides/free-ue5-materials/","author":{"@type":"Person","@id":"https://rafucos.github.io/rafasc-links/#rafa","name":"RafaSC","url":"https://rafucos.github.io/rafasc-links/"},"publisher":{"@type":"Person","@id":"https://rafucos.github.io/rafasc-links/#rafa","name":"RafaSC"},"about":{"@type":"Thing","name":"Unreal Engine 5"},"wordCount":477},{"@type":"VideoObject","name":"Painted Edges Shader in Unreal Engine 5","description":"Painted Edges: painted edges growing on a shelf as the width changes","thumbnailUrl":["https://rafucos.github.io/rafasc-links/v2/media/edges.webp"],"uploadDate":"2026-11-14T12:00:00+01:00","duration":"PT6S","contentUrl":"https://rafucos.github.io/rafasc-links/v2/media/edges.mp4","embedUrl":"https://rafucos.github.io/rafasc-links/guides/free-ue5-materials/","inLanguage":"en"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are these UE5 materials free for commercial use?","acceptedAnswer":{"@type":"Answer","text":"Yes. They are free listings on Fab and can be used commercially under the Fab license."}},{"@type":"Question","name":"Which Unreal Engine versions do the free packs support?","acceptedAnswer":{"@type":"Answer","text":"Painted Edges was tested on UE 5.5 and 5.8. Toon Studio Lite is for UE 5.8 only."}},{"@type":"Question","name":"Do the free packs need textures?","acceptedAnswer":{"@type":"Answer","text":"No. Both are procedural: the effects use no texture files."}},{"@type":"Question","name":"What is the difference between Toon Studio Lite and the full pack?","acceptedAnswer":{"@type":"Answer","text":"The Lite has 3 fixed looks. The full pack, Custom Toon Shaders Studio, has 13 looks, effect mixing, Save Preset and per-object highlight outlines."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"RafaSC","item":"https://rafucos.github.io/rafasc-links/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://rafucos.github.io/rafasc-links/guides/"},{"@type":"ListItem","position":3,"name":"Free UE5 Materials: Painted Edges and a Toon Shader","item":"https://rafucos.github.io/rafasc-links/guides/free-ue5-materials/"}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap"></noscript>
+<style>:root{color-scheme:dark;--navy:#0F1B3D;--deep:#0A1330;--ink:#071026;--panel:#131F45;--lime:#C8EC2A;--cream:#FFF1D0;--muted:#B4BBD2;--line:rgba(255,241,208,.16);
+--display:"Bricolage Grotesque",system-ui,sans-serif;--text:"Atkinson Hyperlegible Next",system-ui,-apple-system,"Segoe UI",sans-serif;--g:clamp(16px,3.2vw,48px)}
+*{box-sizing:border-box;margin:0}html{background:var(--deep)}
+body{background:var(--deep);color:var(--cream);font-family:var(--text);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}img,video{display:block;max-width:100%}:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--g)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font:600 16px/1 var(--text);text-decoration:none;white-space:nowrap}
+.btn-lime{background:var(--lime);color:var(--ink)}.btn-lime:hover{background:#d9f65c}
+.btn-ghost{border:1.5px solid rgba(255,241,208,.5);color:var(--cream)}.btn-ghost:hover{border-color:var(--cream);background:rgba(255,241,208,.1)}
+.nav{display:flex;align-items:center;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:19px}
+.brand img{width:34px;height:34px;border-radius:50%}.nav ul{display:flex;gap:4px;list-style:none;padding:0;margin:0 0 0 auto}
+.nav ul a{display:block;padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:15px}.nav ul a:hover{color:var(--cream)}
+.crumb{font-size:14px;color:var(--muted);padding:6px 0 18px}.crumb a{color:var(--muted)}.crumb a:hover{color:var(--cream)}
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center;padding:clamp(12px,1.4vw,18px) clamp(12px,1.4vw,18px) clamp(12px,1.4vw,18px);padding-right:clamp(20px,3vw,48px);border-radius:28px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.media{position:relative;aspect-ratio:32/15;border-radius:18px;overflow:hidden;background:var(--ink)}
+.media img,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.media video{opacity:0;transition:opacity .5s}.media.playing video{opacity:1}
+.pause{position:absolute;right:10px;bottom:10px;min-height:40px;padding:0 14px;border-radius:999px;border:0;background:rgba(7,16,38,.78);color:var(--cream);font:600 14px var(--text);cursor:pointer}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,3.4vw,50px);line-height:1.02;letter-spacing:-.028em;text-wrap:balance}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,3vw,40px);line-height:1.05;letter-spacing:-.025em;margin-bottom:18px}
+.short{color:var(--muted);margin:14px 0}.meta{margin-top:14px;font-size:14px;color:var(--muted)}
+.intro{display:grid;gap:12px;max-width:72ch;font-size:clamp(17px,1.3vw,19px)}.facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin-bottom:20px}
+.facts li{padding:4px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);font-size:14px}
+.buy{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.price{font-family:var(--display);font-weight:700;font-size:26px}
+section{padding-top:clamp(40px,6vw,80px)}.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,64px)}
+.list{padding-left:20px;display:grid;gap:8px;color:var(--cream)}.list li::marker{color:var(--lime)}
+.gh{font-family:var(--display);font-size:19px;margin:20px 0 10px}.glist a{color:var(--lime);text-underline-offset:3px}
+details{border-top:1px solid var(--line);padding:16px 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:20px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--lime);font-size:24px;line-height:1}details[open] summary::after{content:"–"}summary::-webkit-details-marker{display:none}
+details p{color:var(--muted);margin-top:10px;max-width:70ch}
+.more{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.more a{display:block;text-decoration:none;border-radius:20px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
+.more img{aspect-ratio:32/15;object-fit:cover;width:100%}.more b{display:block;padding:12px 16px 2px;font-family:var(--display);font-size:18px}
+.more span{display:block;padding:0 16px 14px;color:var(--muted);font-size:14px}
+.hire{margin-top:clamp(48px,7vw,96px);padding:clamp(24px,4vw,48px);border-radius:28px;background:var(--lime);color:var(--ink);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+.hire h2{margin:0;color:var(--ink)}.hire p{max-width:40ch}.hire .btn{background:var(--ink);color:var(--cream)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:48px;padding:20px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.foot a{color:var(--muted);margin-left:16px}.foot a:hover{color:var(--cream)}
+@media(max-width:860px){.nav ul{display:none}.nav .btn{margin-left:auto}.hero{grid-template-columns:1fr;padding:12px 12px 22px}.hero>div:last-child{padding:0 8px}.cols{grid-template-columns:1fr}.more{grid-template-columns:repeat(2,minmax(0,1fr))}.foot a{margin:0 16px 0 0}}
+
+.art{max-width:760px;margin:0 auto}.art h1{margin:6px 0 16px}.kick{color:var(--lime);font:600 14px var(--text);letter-spacing:.06em;text-transform:uppercase}
+.ans{font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:var(--cream)}.by{color:var(--muted);font-size:14px;margin:14px 0 22px}
+.art .media{margin:0 0 8px}.art h2{margin:44px 0 14px;font-size:clamp(24px,2.4vw,32px)}.art p{margin:0 0 14px}.art p a,.art li a,.art td a{color:var(--lime);text-underline-offset:3px}
+.art ol,.art ul.list{padding-left:22px;display:grid;gap:8px;margin:0 0 18px}.art ol li::marker{color:var(--lime);font-weight:600}
+code{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:rgba(255,241,208,.09);padding:1px 6px;border-radius:6px;overflow-wrap:anywhere}
+figure{margin:22px 0}figure img{width:100%;height:auto;border-radius:16px;box-shadow:inset 0 0 0 1px var(--line)}figcaption{color:var(--muted);font-size:14px;margin-top:8px}
+.tw{overflow-x:auto;margin:0 0 18px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--line)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}th{font-family:var(--display);font-weight:600;background:var(--panel)}tr:last-child td{border-bottom:0}
+.note{border-left:3px solid var(--lime);padding:10px 16px;background:var(--panel);border-radius:0 12px 12px 0;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin:30px 0;padding:22px 24px;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.cta p{margin:0}.cta .k{color:var(--lime);font:600 13px var(--text);letter-spacing:.06em;text-transform:uppercase}.cta .n{font-family:var(--display);font-weight:700;font-size:24px;margin:4px 0}
+.cta .n span{color:var(--lime);margin-left:8px}.cta .l{color:var(--muted);max-width:44ch}.cta .m{color:var(--muted);font-size:14px;margin-top:6px}.cta .b{display:flex;flex-wrap:wrap;gap:10px}
+.rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.rel a{display:block;text-decoration:none;border-radius:18px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);padding:16px 18px}
+.rel b{display:block;font-family:var(--display);font-size:18px;line-height:1.2}.rel span{display:block;color:var(--muted);font-size:14px;margin-top:6px}
+.save{display:flex;gap:18px;align-items:center;margin-top:40px;padding:16px;border-radius:18px;box-shadow:inset 0 0 0 1px var(--line)}.save img{width:120px;height:auto;border-radius:10px}.save p{margin:0;color:var(--muted);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{display:block;text-decoration:none;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
+.card img{width:100%;height:auto;aspect-ratio:32/15;object-fit:cover}.card div{padding:16px 20px 20px}.card b{display:block;font-family:var(--display);font-size:21px;line-height:1.15;margin:4px 0 8px}.card p{color:var(--muted);font-size:15px;margin:0}
+@media(max-width:860px){.rel{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.cta .b{width:100%}.cta .btn{flex:1 1 auto}}
+</style><script data-goatcounter="https://rafasc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
+<body><div class="wrap">
+<header class="nav"><a class="brand" href="../../"><img src="../../v2/media/logo.webp" alt="" width="34" height="34">RafaSC</a><ul><li><a href="../../#materials">Materials</a></li><li><a href="../../guides/">Guides</a></li><li><a href="../../#work">Work</a></li></ul><a class="btn btn-lime" href="../../go/web-guia/fiverr/">Hire me</a></header>
+<main><article class="art">
+<nav class="crumb" aria-label="Breadcrumb"><a href="../../">RafaSC</a> › <a href="../">Guides</a> › Free UE5 Materials: Painted Edges and a Toon Shader</nav>
+<p class="kick">Free</p>
+<h1>Free UE5 materials: a painted edge shader and a toon shader</h1>
+<p class="ans">I publish two free packs for Unreal Engine 5 on Fab. Painted Edges is a Material Function that paints hand-painted edges on a mesh with no UVs, no textures and no baking. Toon Studio Lite is a post-process toon shader for UE 5.8 with three looks. Both can be used in commercial projects under the Fab license.</p>
+<p class="by">By <a href="../../#about">RafaSC</a>, 3D and technical artist · Updated <time datetime="2026-11-15">November 15, 2026</time> · 3 min read</p>
+<div class="media" id="m" data-base="../../v2/media/" data-clip="edges" data-m="1"><img src="../../v2/media/edges.webp" srcset="../../v2/media/edges_m.webp 960w, ../../v2/media/edges.webp 1600w" sizes="(max-width:860px) 92vw, 760px" alt="Painted Edges: painted edges growing on a shelf as the width changes" width="1600" height="750" fetchpriority="high"><video muted playsinline loop preload="none" aria-hidden="true"></video><button class="pause" id="pz" type="button" hidden>Pause video</button></div>
+<h2 id="the-two-free-packs">The two free packs</h2>
+<div class="tw"><table><thead><tr><th></th><th>Painted Edges</th><th>Toon Studio Lite</th></tr></thead><tbody><tr><td>What it is</td><td>A drop-in Material Function that paints the edges of a mesh</td><td>A post-process toon shader carried by one actor</td></tr><tr><td>Unreal Engine</td><td>Tested on 5.5 and 5.8</td><td>5.8 only</td></tr><tr><td>What is inside</td><td>3 Material Functions, 1 master material, 13 parameters, 6 colour presets, 2 example materials, a demo map with 7 stations</td><td>3 looks (01 Toon, 02 Anime Soft, 13 Outline), Outline Color and Shadow Color controls, a demo level</td></tr><tr><td>Textures</td><td>None</td><td>None</td></tr><tr><td>Needs</td><td>Bevelled or smooth-normal edges</td><td>Deferred renderer</td></tr><tr><td>Not for</td><td>Path Tracer</td><td>Forward renderer</td></tr><tr><td>Price</td><td>Free</td><td>Free</td></tr></tbody></table></div>
+<h2 id="painted-edges">Painted Edges</h2>
+<p>It paints a band along every edge of your mesh: filled in the centre, fading outwards and broken up by wear that never leaves gaps. You plug your own texture or colour in and take it out with painted edges on top.</p>
+<figure><img src="../img/ue5-painted-edges-shader-before-after-1280.webp" srcset="../img/ue5-painted-edges-shader-before-after-640.webp 640w, ../img/ue5-painted-edges-shader-before-after-1280.webp 1280w" sizes="(max-width:860px) 92vw, 760px" width="1280" height="720" loading="lazy" decoding="async" alt="Three cubes: plain, with hand-painted yellow edges, and with glowing edges"><figcaption>Before, after, and the same edges with emissive.</figcaption></figure>
+<p>How it finds the edges without a curvature map, and the mesh rules that matter, are in <a href="../hand-painted-edge-wear-ue5/">hand-painted edge wear without baking</a>. The product page is <a href="../../v2/painted-edges/">Painted Edges Shader</a>.</p>
+<h2 id="toon-studio-lite">Toon Studio Lite</h2>
+<p>Drag <code>BP_ToonStudio</code> into the level and pick a look. No material changes, no plugins, no C++.</p>
+<figure><img src="../img/free-toon-shader-unreal-engine-5-three-looks-1280.webp" srcset="../img/free-toon-shader-unreal-engine-5-three-looks-640.webp 640w, ../img/free-toon-shader-unreal-engine-5-three-looks-1280.webp 1280w" sizes="(max-width:860px) 92vw, 760px" width="1280" height="720" loading="lazy" decoding="async" alt="The three free looks of Toon Studio Lite on a tea house: 01 Toon, 02 Anime Soft and 13 Outline"><figcaption>The three looks in the free pack.</figcaption></figure>
+<p>Install steps, settings and limits are in <a href="../free-toon-shader-unreal-engine-5-8/">free toon shader for Unreal Engine 5.8</a>.</p>
+<aside class="cta" aria-label="The shortcut"><div><p class="k">The shortcut</p><p class="n">Painted Edges Shader <span>Free</span></p><p class="l">Free stylized edge shader for UE5: hand-painted edges on any mesh as a drop-in Material Function. No UVs, no textures, no baking.</p><p class="m">On Fab · tested on Unreal Engine 5.5 and 5.8</p></div><div class="b"><a class="btn btn-lime" href="../../go/web-guia/painted_edges/">Get it free on Fab</a><a class="btn btn-ghost" href="../../go/web-guia/toon_lite/">Get Toon Studio Lite free</a></div></aside>
+<h2 id="what-is-not-free">What is not free</h2>
+<p>Honesty first: the rest of my catalogue is paid. The free packs are complete and usable on their own, not trials that expire.</p>
+<div class="tw"><table><thead><tr><th>Paid pack</th><th>What it adds</th></tr></thead><tbody><tr><td><a href="../../v2/toon-studio/">Custom Toon Shaders Studio</a></td><td>13 looks instead of 3, effect mixing, Save Preset, highlight outlines</td></tr><tr><td><a href="../../v2/stylized-water/">Stylized Water Material</a></td><td>Procedural water, 6 presets, spline river, waterfall, floating objects</td></tr><tr><td><a href="../../v2/see-through/">See-Through Occlusion</a></td><td>See your character through walls, roofs and trees</td></tr><tr><td><a href="../../v2/coverage/">Stylized Snow &amp; Moss Coverage</a></td><td>Painted snow and moss on any material, runtime weather</td></tr></tbody></table></div>
+<h2 id="license-and-support">License and support</h2>
+<p>Both free packs are regular Fab listings, so the Fab license you choose applies, including commercial projects. Questions go in the Questions tab of each Fab listing.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<details><summary>Are these UE5 materials free for commercial use?</summary><p>Yes. They are free listings on Fab and can be used commercially under the Fab license.</p></details><details><summary>Which Unreal Engine versions do the free packs support?</summary><p>Painted Edges was tested on UE 5.5 and 5.8. Toon Studio Lite is for UE 5.8 only.</p></details><details><summary>Do the free packs need textures?</summary><p>No. Both are procedural: the effects use no texture files.</p></details><details><summary>What is the difference between Toon Studio Lite and the full pack?</summary><p>The Lite has 3 fixed looks. The full pack, Custom Toon Shaders Studio, has 13 looks, effect mixing, Save Preset and per-object highlight outlines.</p></details>
+<h2 id="more">Related guides</h2>
+<div class="rel"><a href="../hand-painted-edge-wear-ue5/"><b>Hand-Painted Edge Wear in UE5 Without Baking</b><span>7 min read</span></a><a href="../free-toon-shader-unreal-engine-5-8/"><b>Free Toon Shader for Unreal Engine 5.8: Setup</b><span>5 min read</span></a><a href="../ue-5-8-toon-shader-vs-post-process/"><b>UE 5.8 Toon Shader vs Post-Process Toon: Which One?</b><span>6 min read</span></a></div>
+<div class="save"><img src="../img/pin-free-ue5-materials.jpg" alt="Free UE5 Materials: Painted Edges and a Toon Shader: summary image for Pinterest" width="1000" height="1500" loading="lazy" decoding="async"><p>Save this guide for later. Product used on this page: <a href="../../v2/painted-edges/">Painted Edges Shader</a>.</p></div>
+</article></main>
+<footer class="foot"><span>RafaSC · stylized materials and 3D art · Barcelona</span><span><a href="../../">Home</a><a href="../../guides/">Guides</a><a href="../../privacy.html">Privacy</a><a href="../../terms.html">Terms</a></span></footer>
+</div>
+<script>
+(()=>{const m=document.getElementById('m');if(!m)return;const v=m.querySelector('video'),b=document.getElementById('pz');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,small=matchMedia('(max-width: 860px)').matches;
+const c=navigator.connection||{},ahorro=c.saveData||/^(slow-2g|2g|3g)$/.test(c.effectiveType||'');
+const base=m.dataset.base+m.dataset.clip+(small&&m.dataset.m?'_m':'');const src=base+'.mp4';
+if(reduce||ahorro){v.controls=true;v.src=src;v.poster=base+'.webp';m.classList.add('playing');return;}
+let manual=false;b.hidden=false;
+b.addEventListener('click',()=>{manual=true;if(v.paused){v.play();b.textContent='Pause video';}else{v.pause();b.textContent='Play video';}});
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!v.src)v.src=src;if(!manual)v.play().then(()=>m.classList.add('playing')).catch(()=>{});}else v.pause();}),{threshold:.4}).observe(m);})();
+</script></body></html>
