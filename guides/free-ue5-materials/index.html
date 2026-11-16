@@ -72,6 +72,12 @@ th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px sol
 .save{display:flex;gap:18px;align-items:center;margin-top:40px;padding:16px;border-radius:18px;box-shadow:inset 0 0 0 1px var(--line)}.save img{width:120px;height:auto;border-radius:10px}.save p{margin:0;color:var(--muted);font-size:15px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{display:block;text-decoration:none;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
 .card img{width:100%;height:auto;aspect-ratio:32/15;object-fit:cover}.card div{padding:16px 20px 20px}.card b{display:block;font-family:var(--display);font-size:21px;line-height:1.15;margin:4px 0 8px}.card p{color:var(--muted);font-size:15px;margin:0}
+.yt{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;border-radius:18px;overflow:hidden;background:#000;cursor:pointer;box-shadow:inset 0 0 0 1px var(--line)}
+.yt img,.yt iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.yt .pl{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:14px;background:rgba(10,15,40,.82);box-shadow:0 0 0 2px var(--lime)}
+.yt .pl::after{content:"";position:absolute;left:27px;top:14px;border-left:18px solid var(--lime);border-top:10px solid transparent;border-bottom:10px solid transparent}
+iframe.yt{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:18px;background:#000}
+.yt:focus-visible{outline:3px solid var(--lime);outline-offset:3px}.ytcap{color:var(--muted);font-size:14px;margin-top:8px}
 @media(max-width:860px){.rel{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.cta .b{width:100%}.cta .btn{flex:1 1 auto}}
 </style><script data-goatcounter="https://rafasc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
 <body><div class="wrap">
@@ -99,6 +105,7 @@ th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px sol
 <div class="tw"><table><thead><tr><th>Paid pack</th><th>What it adds</th></tr></thead><tbody><tr><td><a href="../../v2/toon-studio/">Custom Toon Shaders Studio</a></td><td>13 looks instead of 3, effect mixing, Save Preset, highlight outlines</td></tr><tr><td><a href="../../v2/stylized-water/">Stylized Water Material</a></td><td>Procedural water, 6 presets, spline river, waterfall, floating objects</td></tr><tr><td><a href="../../v2/see-through/">See-Through Occlusion</a></td><td>See your character through walls, roofs and trees</td></tr><tr><td><a href="../../v2/coverage/">Stylized Snow &amp; Moss Coverage</a></td><td>Painted snow and moss on any material, runtime weather</td></tr></tbody></table></div>
 <h2 id="license-and-support">License and support</h2>
 <p>Both free packs are regular Fab listings, so the Fab license you choose applies, including commercial projects. Questions go in the Questions tab of each Fab listing.</p>
+
 <h2 id="faq">Frequently asked questions</h2>
 <details><summary>Are these UE5 materials free for commercial use?</summary><p>Yes. They are free listings on Fab and can be used commercially under the Fab license.</p></details><details><summary>Which Unreal Engine versions do the free packs support?</summary><p>Painted Edges was tested on UE 5.5 and 5.8. Toon Studio Lite is for UE 5.8 only.</p></details><details><summary>Do the free packs need textures?</summary><p>No. Both are procedural: the effects use no texture files.</p></details><details><summary>What is the difference between Toon Studio Lite and the full pack?</summary><p>The Lite has 3 fixed looks. The full pack, Custom Toon Shaders Studio, has 13 looks, effect mixing, Save Preset and per-object highlight outlines.</p></details>
 <h2 id="more">Related guides</h2>
