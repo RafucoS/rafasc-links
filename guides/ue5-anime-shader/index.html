@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Anime Shader for Unreal Engine 5: Cel Shading Setup | RafaSC</title>
+<meta name="description" content="How to get an anime cel shading look in Unreal Engine 5: flat bands, soft shadows, coloured outlines and anime-style lighting. Steps and free option.">
+<link rel="canonical" href="https://rafucos.github.io/rafasc-links/guides/ue5-anime-shader/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article"><meta property="og:site_name" content="RafaSC">
+<meta property="og:title" content="Anime Shader for Unreal Engine 5: Cel Shading Setup | RafaSC"><meta property="og:description" content="How to get an anime cel shading look in Unreal Engine 5: flat bands, soft shadows, coloured outlines and anime-style lighting. Steps and free option.">
+<meta property="og:url" content="https://rafucos.github.io/rafasc-links/guides/ue5-anime-shader/"><meta property="og:image" content="https://rafucos.github.io/rafasc-links/guides/img/og-ue5-anime-shader.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Anime shader for Unreal Engine 5: cel shading setup and free option">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Anime Shader for Unreal Engine 5: Cel Shading Setup | RafaSC">
+<meta name="twitter:description" content="How to get an anime cel shading look in Unreal Engine 5: flat bands, soft shadows, coloured outlines and anime-style lighting. Steps and free option."><meta name="twitter:image" content="https://rafucos.github.io/rafasc-links/guides/img/og-ue5-anime-shader.jpg">
+<link rel="icon" type="image/png" href="../../v2/media/favicon.png"><link rel="apple-touch-icon" href="../../v2/media/apple-touch-icon.png">
+<meta name="theme-color" content="#0A1330">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://rafucos.github.io/rafasc-links/guides/ue5-anime-shader/#article","headline":"Anime shader for Unreal Engine 5: cel shading setup and free option","description":"How to get an anime cel shading look in Unreal Engine 5: flat bands, soft shadows, coloured outlines and anime-style lighting. Steps and free option.","image":["https://rafucos.github.io/rafasc-links/guides/img/og-ue5-anime-shader.jpg","https://rafucos.github.io/rafasc-links/guides/img/ue5-cel-shader-three-tone-toon-shading-1280.webp","https://rafucos.github.io/rafasc-links/guides/img/ue5-toon-shader-styles-anime-comic-watercolor-1280.webp"],"datePublished":"2026-11-15","dateModified":"2026-11-15","inLanguage":"en","mainEntityOfPage":"https://rafucos.github.io/rafasc-links/guides/ue5-anime-shader/","author":{"@type":"Person","@id":"https://rafucos.github.io/rafasc-links/#rafa","name":"RafaSC","url":"https://rafucos.github.io/rafasc-links/"},"publisher":{"@type":"Person","@id":"https://rafucos.github.io/rafasc-links/#rafa","name":"RafaSC"},"about":{"@type":"Thing","name":"Unreal Engine 5"},"wordCount":458},{"@type":"VideoObject","name":"Custom Toon Shaders Studio in Unreal Engine 5","description":"Toon Studio: a tea house switching between toon styles","thumbnailUrl":["https://rafucos.github.io/rafasc-links/v2/media/toonstudio.webp"],"uploadDate":"2026-11-14T12:00:00+01:00","duration":"PT8S","contentUrl":"https://rafucos.github.io/rafasc-links/v2/media/toonstudio.mp4","embedUrl":"https://rafucos.github.io/rafasc-links/guides/ue5-anime-shader/","inLanguage":"en"},{"@type":"VideoObject","name":"Custom Toon Shaders Studio: toon shader for Unreal Engine 5.8 (13 styles)","description":"Custom Toon Shaders Studio: toon shader for Unreal Engine 5.8 (13 styles) by RafaSC.","thumbnailUrl":["https://i.ytimg.com/vi/42v-rcnMulc/hqdefault.jpg"],"uploadDate":"2026-10-24T12:00:00+02:00","embedUrl":"https://www.youtube.com/embed/42v-rcnMulc","contentUrl":"https://www.youtube.com/watch?v=42v-rcnMulc","inLanguage":"en"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I make an anime-style look in Unreal Engine 5?","acceptedAnswer":{"@type":"Answer","text":"Use a post-process toon shader set to a soft preset: pastel high-key tones, soft shadow edges, lilac shadows and a coloured outline instead of black. No material changes needed."}},{"@type":"Question","name":"Is there a free anime shader for UE5?","acceptedAnswer":{"@type":"Answer","text":"Yes. Toon Studio Lite is free on Fab and includes the 02 Anime Soft preset. It needs Unreal Engine 5.8 and the deferred renderer."}},{"@type":"Question","name":"What is the difference between toon and anime shading in UE5?","acceptedAnswer":{"@type":"Answer","text":"Toon shading uses crisp, high-contrast tone bands and a bold black outline. Anime shading uses softer bands, pastel tones, lilac shadows and a soft or coloured outline."}},{"@type":"Question","name":"Does the anime shader work on bought assets?","acceptedAnswer":{"@type":"Answer","text":"Yes. As a post-process effect it reads the finished frame and does not require you to change individual materials."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"RafaSC","item":"https://rafucos.github.io/rafasc-links/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://rafucos.github.io/rafasc-links/guides/"},{"@type":"ListItem","position":3,"name":"Anime Shader for Unreal Engine 5: Cel Shading Setup","item":"https://rafucos.github.io/rafasc-links/guides/ue5-anime-shader/"}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap"></noscript>
+<style>:root{color-scheme:dark;--navy:#0F1B3D;--deep:#0A1330;--ink:#071026;--panel:#131F45;--lime:#C8EC2A;--cream:#FFF1D0;--muted:#B4BBD2;--line:rgba(255,241,208,.16);
+--display:"Bricolage Grotesque",system-ui,sans-serif;--text:"Atkinson Hyperlegible Next",system-ui,-apple-system,"Segoe UI",sans-serif;--g:clamp(16px,3.2vw,48px)}
+*{box-sizing:border-box;margin:0}html{background:var(--deep);overflow-x:hidden;overscroll-behavior-x:none}
+body{overflow-x:clip;background:var(--deep);color:var(--cream);font-family:var(--text);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}img,video{display:block;max-width:100%}:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--g)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font:600 16px/1 var(--text);text-decoration:none;white-space:nowrap}
+.btn-lime{background:var(--lime);color:var(--ink)}.btn-lime:hover{background:#d9f65c}
+.btn-ghost{border:1.5px solid rgba(255,241,208,.5);color:var(--cream)}.btn-ghost:hover{border-color:var(--cream);background:rgba(255,241,208,.1)}
+.nav{display:flex;align-items:center;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:19px}
+.brand img{width:34px;height:34px;border-radius:50%}.nav ul{display:flex;gap:4px;list-style:none;padding:0;margin:0 0 0 auto}
+.nav ul a{display:block;padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:15px}.nav ul a:hover{color:var(--cream)}
+.crumb{font-size:14px;color:var(--muted);padding:6px 0 18px}.crumb a{color:var(--muted)}.crumb a:hover{color:var(--cream)}
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center;padding:clamp(12px,1.4vw,18px) clamp(12px,1.4vw,18px) clamp(12px,1.4vw,18px);padding-right:clamp(20px,3vw,48px);border-radius:28px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.media{position:relative;aspect-ratio:32/15;border-radius:18px;overflow:hidden;background:var(--ink)}
+.media img,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.media video{opacity:0;transition:opacity .5s}.media.playing video{opacity:1}
+.pause{position:absolute;right:10px;bottom:10px;min-height:40px;padding:0 14px;border-radius:999px;border:0;background:rgba(7,16,38,.78);color:var(--cream);font:600 14px var(--text);cursor:pointer}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,3.4vw,50px);line-height:1.02;letter-spacing:-.028em;text-wrap:balance}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,3vw,40px);line-height:1.05;letter-spacing:-.025em;margin-bottom:18px}
+.short{color:var(--muted);margin:14px 0}.meta{margin-top:14px;font-size:14px;color:var(--muted)}
+.intro{display:grid;gap:12px;max-width:72ch;font-size:clamp(17px,1.3vw,19px)}.facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin-bottom:20px}
+.facts li{padding:4px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);font-size:14px}
+.buy{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.price{font-family:var(--display);font-weight:700;font-size:26px}
+section{padding-top:clamp(40px,6vw,80px)}.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,64px)}
+.list{padding-left:20px;display:grid;gap:8px;color:var(--cream)}.list li::marker{color:var(--lime)}
+.gh{font-family:var(--display);font-size:19px;margin:20px 0 10px}.glist a{color:var(--lime);text-underline-offset:3px}
+details{border-top:1px solid var(--line);padding:16px 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:20px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--lime);font-size:24px;line-height:1}details[open] summary::after{content:"–"}summary::-webkit-details-marker{display:none}
+details p{color:var(--muted);margin-top:10px;max-width:70ch}
+.more{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.more a{display:block;text-decoration:none;border-radius:20px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
+.more img{aspect-ratio:32/15;object-fit:cover;width:100%}.more b{display:block;padding:12px 16px 2px;font-family:var(--display);font-size:18px}
+.more span{display:block;padding:0 16px 14px;color:var(--muted);font-size:14px}
+.hire{margin-top:clamp(48px,7vw,96px);padding:clamp(24px,4vw,48px);border-radius:28px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);color:var(--cream);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+.hire h2{margin:0}.hire p{max-width:40ch;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:48px;padding:20px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.foot a{color:var(--muted);margin-left:16px}.foot a:hover{color:var(--cream)}
+@media(max-width:860px){.nav ul{display:none}.nav .btn{margin-left:auto}.hero{grid-template-columns:1fr;padding:12px 12px 22px}.hero>div:last-child{padding:0 8px}.cols{grid-template-columns:1fr}.more{grid-template-columns:repeat(2,minmax(0,1fr))}.foot a{margin:0 16px 0 0}}
+
+.art{max-width:760px;margin:0 auto}.art h1{margin:6px 0 16px}.kick{color:var(--lime);font:600 14px var(--text);letter-spacing:.06em;text-transform:uppercase}
+.ans{font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:var(--cream)}.by{color:var(--muted);font-size:14px;margin:14px 0 22px}
+.art .media{margin:0 0 8px}.art h2{margin:44px 0 14px;font-size:clamp(24px,2.4vw,32px)}.art p{margin:0 0 14px}.art p a,.art li a,.art td a{color:var(--lime);text-underline-offset:3px}
+.art ol,.art ul.list{padding-left:22px;display:grid;gap:8px;margin:0 0 18px}.art ol li::marker{color:var(--lime);font-weight:600}
+code{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:rgba(255,241,208,.09);padding:1px 6px;border-radius:6px;overflow-wrap:anywhere}
+figure{margin:22px 0}figure img{width:100%;height:auto;border-radius:16px;box-shadow:inset 0 0 0 1px var(--line)}figcaption{color:var(--muted);font-size:14px;margin-top:8px}
+.tw{overflow-x:auto;margin:0 0 18px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--line)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}th{font-family:var(--display);font-weight:600;background:var(--panel)}tr:last-child td{border-bottom:0}
+.note{border-left:3px solid var(--lime);padding:10px 16px;background:var(--panel);border-radius:0 12px 12px 0;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin:30px 0;padding:22px 24px;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.cta p{margin:0}.cta .k{color:var(--lime);font:600 13px var(--text);letter-spacing:.06em;text-transform:uppercase}.cta .n{font-family:var(--display);font-weight:700;font-size:24px;margin:4px 0}
+.cta .n span{color:var(--lime);margin-left:8px}.cta .l{color:var(--muted);max-width:44ch}.cta .m{color:var(--muted);font-size:14px;margin-top:6px}.cta .b{display:flex;flex-wrap:wrap;gap:10px}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:16px 0 4px}.ctas span{color:var(--muted);font-size:15px}
+.rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.rel a{display:block;text-decoration:none;border-radius:18px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);padding:16px 18px}
+.rel b{display:block;font-family:var(--display);font-size:18px;line-height:1.2}.rel span{display:block;color:var(--muted);font-size:14px;margin-top:6px}
+.save{display:flex;gap:18px;align-items:center;margin-top:40px;padding:16px;border-radius:18px;box-shadow:inset 0 0 0 1px var(--line)}.save img{width:120px;height:auto;border-radius:10px}.save p{margin:0;color:var(--muted);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{display:block;text-decoration:none;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
+.card img{width:100%;height:auto;aspect-ratio:32/15;object-fit:cover}.card div{padding:16px 20px 20px}.card b{display:block;font-family:var(--display);font-size:21px;line-height:1.15;margin:4px 0 8px}.card p{color:var(--muted);font-size:15px;margin:0}
+.yt{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;border-radius:18px;overflow:hidden;background:#000;cursor:pointer;box-shadow:inset 0 0 0 1px var(--line)}
+.yt img,.yt iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.yt .pl{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:14px;background:rgba(10,15,40,.82);box-shadow:0 0 0 2px var(--lime)}
+.yt .pl::after{content:"";position:absolute;left:27px;top:14px;border-left:18px solid var(--lime);border-top:10px solid transparent;border-bottom:10px solid transparent}
+iframe.yt{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:18px;background:#000}
+.yt:focus-visible{outline:3px solid var(--lime);outline-offset:3px}.ytcap{color:var(--muted);font-size:14px;margin-top:8px}
+@media(max-width:860px){.rel{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.cta .b{width:100%}.cta .btn{flex:1 1 auto}}
+</style><script data-goatcounter="https://rafasc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
+<body><div class="wrap">
+<header class="nav"><a class="brand" href="../../"><img src="../../v2/media/logo.webp" alt="" width="34" height="34">RafaSC</a><ul><li><a href="../../#materials">Materials</a></li><li><a href="../../guides/">Guides</a></li><li><a href="../../#work">Work</a></li></ul><a class="btn btn-ghost" href="../../go/web-guia/fiverr/">Hire me</a></header>
+<main><article class="art">
+<nav class="crumb" aria-label="Breadcrumb"><a href="../../">RafaSC</a> › <a href="../">Guides</a> › Anime Shader for Unreal Engine 5: Cel Shading Setup</nav>
+<p class="kick">Toon and cel shading</p>
+<h1>Anime shader for Unreal Engine 5: cel shading setup and free option</h1>
+<p class="ans">An anime shader in Unreal Engine 5 replaces the default lighting with flat tone bands, adds a coloured outline and softens the shadows so they read like hand-drawn anime art. A post-process anime shader does this across the whole scene without editing any material.</p>
+<p class="by">By <a href="../../#about">RafaSC</a>, 3D and technical artist · Updated <time datetime="2026-11-15">November 15, 2026</time> · 5 min read</p>
+<div class="media" id="m" data-base="../../v2/media/" data-clip="toonstudio" data-m="1"><img src="../../v2/media/toonstudio.webp" srcset="../../v2/media/toonstudio_m.webp 960w, ../../v2/media/toonstudio.webp 1600w" sizes="(max-width:860px) 92vw, 760px" alt="Toon Studio: a tea house switching between toon styles" width="1600" height="750" fetchpriority="high"><video muted playsinline loop preload="none" aria-hidden="true"></video><button class="pause" id="pz" type="button" hidden>Pause video</button></div>
+<div class="ctas"><a class="btn btn-lime" href="../../go/web-guia/toon_studio/">Get it on Fab</a><span>Custom Toon Shaders Studio · $29.99</span></div>
+<h2 id="what-an-anime-look-needs">What an anime look needs</h2>
+<p>Classic anime cel shading has a few distinct properties: a soft shadow band rather than a hard one, pastel high-key tones, a coloured or softened outline (not a hard black ink line), and exposure that keeps the lighter tones close to white without bloom. All of those are possible in Unreal Engine 5 without touching individual materials.</p>
+<h2 id="anime-soft-look-in-custom-toon-shaders-studio">Anime Soft look in Custom Toon Shaders Studio</h2>
+<p>The 02 Anime Soft preset in Custom Toon Shaders Studio was built for this:</p>
+<ul class="list"><li>Pastel high-key tones, with the light side close to white</li><li>Soft shadow edges rather than a crisp toon band</li><li>Lilac-tinted shadows instead of black</li><li>A soft coloured outline instead of a bold ink line</li></ul>
+<p>Setup is one step: drag <strong>BP_ToonStudio</strong> into the level and set Preset to 02 Anime Soft.</p>
+<figure><img src="../img/ue5-cel-shader-three-tone-toon-shading-1280.webp" srcset="../img/ue5-cel-shader-three-tone-toon-shading-640.webp 640w, ../img/ue5-cel-shader-three-tone-toon-shading-1280.webp 1280w" sizes="(max-width:860px) 92vw, 760px" width="1280" height="720" loading="lazy" decoding="async" alt="A cube and four spheres with 3-tone toon shading: deep shadow, flat shadow band, light spot that follows the sun and a thin ink outline"><figcaption>Three flat tones, a light spot that follows the sun and an ink line.</figcaption></figure>
+<h2 id="adjust-the-look">Adjust the look</h2>
+<ul class="list"><li><strong>Outline Color</strong>: set a soft version of your midtone instead of black. Blue-grey or desaturated lavender reads as anime.</li><li><strong>Shadow Color</strong>: a cool lilac or blue-grey. Avoid black shadows.</li><li><strong>Saturation and Brightness</strong>: raise Brightness slightly, lower Saturation for a watercolour-adjacent feel.</li><li><strong>Quality</strong>: 1 gives the best shadow bands. Lower it only if performance is tight.</li></ul>
+<h2 id="free-anime-shader-for-ue5">Free anime shader for UE5</h2>
+<p>Toon Studio Lite is a free pack on Fab with three looks, including 02 Anime Soft. Same actor, same setup, three fixed presets. If you need more control or the other eleven looks, upgrade to Custom Toon Shaders Studio.</p>
+<figure><img src="../img/ue5-toon-shader-styles-anime-comic-watercolor-1280.webp" srcset="../img/ue5-toon-shader-styles-anime-comic-watercolor-640.webp 640w, ../img/ue5-toon-shader-styles-anime-comic-watercolor-1280.webp 1280w" sizes="(max-width:860px) 92vw, 760px" width="1280" height="720" loading="lazy" decoding="async" alt="Nine versions of the same tea house: Toon, Painted Brush, Ghibli, Watercolor, Neon, Moebius, Sumi-e, Sketch and Pixel"><figcaption>Nine of the thirteen looks on the same scene.</figcaption></figure>
+<h2 id="limits">Limits</h2>
+<p>The 02 Anime Soft look needs the deferred renderer. It does not work with the Forward renderer, the Path Tracer or UEFN. Tested on Unreal Engine 5.8 (Windows, DX12).</p>
+<aside class="cta" aria-label="The shortcut"><div><p class="k">The shortcut</p><p class="n">Custom Toon Shaders Studio <span>$29.99</span></p><p class="l">Toon shader for UE5: one actor, 13 toon, anime, comic &amp; painterly post process styles. Mix any effect, set outline and shadow colors, save your own preset.</p><p class="m">On Fab · tested on Unreal Engine 5.8</p></div><div class="b"><a class="btn btn-lime" href="../../go/web-guia/toon_studio/">Get it on Fab</a><a class="btn btn-ghost" href="../../go/web-guia/toon_lite/">Try the free Lite</a></div></aside>
+<h2 id="video">Watch the full walkthrough</h2>
+<button class="yt" type="button" data-id="42v-rcnMulc" data-t="Custom Toon Shaders Studio: toon shader for Unreal Engine 5.8 (13 styles)" aria-label="Play video: Custom Toon Shaders Studio: toon shader for Unreal Engine 5.8 (13 styles)"><img src="https://i.ytimg.com/vi/42v-rcnMulc/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"><span class="pl"></span></button>
+<p class="ytcap">Custom Toon Shaders Studio: toon shader for Unreal Engine 5.8 (13 styles) · <a href="https://www.youtube.com/watch?v=42v-rcnMulc" rel="noopener">Watch on YouTube</a></p>
+<h2 id="faq">Frequently asked questions</h2>
+<details><summary>How do I make an anime-style look in Unreal Engine 5?</summary><p>Use a post-process toon shader set to a soft preset: pastel high-key tones, soft shadow edges, lilac shadows and a coloured outline instead of black. No material changes needed.</p></details><details><summary>Is there a free anime shader for UE5?</summary><p>Yes. Toon Studio Lite is free on Fab and includes the 02 Anime Soft preset. It needs Unreal Engine 5.8 and the deferred renderer.</p></details><details><summary>What is the difference between toon and anime shading in UE5?</summary><p>Toon shading uses crisp, high-contrast tone bands and a bold black outline. Anime shading uses softer bands, pastel tones, lilac shadows and a soft or coloured outline.</p></details><details><summary>Does the anime shader work on bought assets?</summary><p>Yes. As a post-process effect it reads the finished frame and does not require you to change individual materials.</p></details>
+<aside class="cta" aria-label="The shortcut"><div><p class="k">The shortcut</p><p class="n">Custom Toon Shaders Studio <span>$29.99</span></p><p class="l">Toon shader for UE5: one actor, 13 toon, anime, comic &amp; painterly post process styles. Mix any effect, set outline and shadow colors, save your own preset.</p><p class="m">On Fab · tested on Unreal Engine 5.8</p></div><div class="b"><a class="btn btn-lime" href="../../go/web-guia/toon_studio/">Get it on Fab</a><a class="btn btn-ghost" href="../../go/web-guia/toon_lite/">Try the free Lite</a></div></aside>
+<h2 id="more">Related guides</h2>
+<div class="rel"><a href="../free-toon-shader-unreal-engine-5-8/"><b>Free Toon Shader for Unreal Engine 5.8: Setup</b><span>5 min read</span></a><a href="../best-toon-shader-unreal-engine-5/"><b>Best Toon Shader for Unreal Engine 5 (2026)</b><span>8 min read</span></a><a href="../cel-shader-post-process-ue5/"><b>Cel Shading With a Post Process in UE5 Explained</b><span>7 min read</span></a></div>
+<div class="save"><img src="../img/pin-ue5-anime-shader.jpg" alt="Anime Shader for Unreal Engine 5: Cel Shading Setup: summary image for Pinterest" width="1000" height="1500" loading="lazy" decoding="async"><p>Save this guide for later. Product used on this page: <a href="../../v2/toon-studio/">Custom Toon Shaders Studio</a>.</p></div>
+</article></main>
+<footer class="foot"><span>RafaSC · stylized materials and 3D art · Barcelona</span><span><a href="../../">Home</a><a href="../../guides/">Guides</a><a href="../../privacy.html">Privacy</a><a href="../../terms.html">Terms</a></span></footer>
+</div>
+<script>
+(()=>{const m=document.getElementById('m');if(!m)return;const v=m.querySelector('video'),b=document.getElementById('pz');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,small=matchMedia('(max-width: 860px)').matches;
+const c=navigator.connection||{},ahorro=c.saveData||/^(slow-2g|2g|3g)$/.test(c.effectiveType||'');
+const base=m.dataset.base+m.dataset.clip+(small&&m.dataset.m?'_m':'');const src=base+'.mp4';
+if(reduce||ahorro){v.controls=true;v.src=src;v.poster=base+'.webp';m.classList.add('playing');return;}
+let manual=false;b.hidden=false;
+b.addEventListener('click',()=>{manual=true;if(v.paused){v.play();b.textContent='Pause video';}else{v.pause();b.textContent='Play video';}});
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!v.src)v.src=src;if(!manual)v.play().then(()=>m.classList.add('playing')).catch(()=>{});}else v.pause();}),{threshold:.4}).observe(m);})();
+</script><script>
+document.querySelectorAll('.yt').forEach(b=>b.addEventListener('click',()=>{const f=document.createElement('iframe');
+f.className='yt';f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title=b.dataset.t;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;
+b.replaceWith(f);f.focus();}));
+</script></body></html>
