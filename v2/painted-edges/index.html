@@ -49,8 +49,8 @@ details p{color:var(--muted);margin-top:10px;max-width:70ch}
 .more a{display:block;text-decoration:none;border-radius:20px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
 .more img{aspect-ratio:32/15;object-fit:cover;width:100%}.more b{display:block;padding:12px 16px 2px;font-family:var(--display);font-size:18px}
 .more span{display:block;padding:0 16px 14px;color:var(--muted);font-size:14px}
-.hire{margin-top:clamp(48px,7vw,96px);padding:clamp(24px,4vw,48px);border-radius:28px;background:var(--lime);color:var(--ink);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
-.hire h2{margin:0;color:var(--ink)}.hire p{max-width:40ch}.hire .btn{background:var(--ink);color:var(--cream)}
+.hire{margin-top:clamp(48px,7vw,96px);padding:clamp(24px,4vw,48px);border-radius:28px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);color:var(--cream);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+.hire h2{margin:0}.hire p{max-width:40ch;color:var(--muted)}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:48px;padding:20px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 .foot a{color:var(--muted);margin-left:16px}.foot a:hover{color:var(--cream)}
 @media(max-width:860px){.nav ul{display:none}.nav .btn{margin-left:auto}.hero{grid-template-columns:1fr;padding:12px 12px 22px}.hero>div:last-child{padding:0 8px}.cols{grid-template-columns:1fr}.more{grid-template-columns:repeat(2,minmax(0,1fr))}.foot a{margin:0 16px 0 0}}
@@ -58,7 +58,7 @@ details p{color:var(--muted);margin-top:10px;max-width:70ch}
 <body><div class="wrap">
 <header class="nav"><a class="brand" href="../"><img src="../media/logo.webp" alt="" width="34" height="34">RafaSC</a>
 <ul><li><a href="../#materials">All materials</a></li><li><a href="../../guides/">Guides</a></li><li><a href="../#work">Work</a></li></ul>
-<a class="btn btn-lime" href="../../go/web-producto/fiverr/">Hire me</a></header>
+<a class="btn btn-ghost" href="../../go/web-producto/fiverr/">Hire me</a></header>
 <main>
 <nav class="crumb" aria-label="Breadcrumb"><a href="../">RafaSC</a> › <a href="../#materials">Materials</a> › Painted Edges Shader</nav>
 <div class="hero">
@@ -66,7 +66,7 @@ details p{color:var(--muted);margin-top:10px;max-width:70ch}
  <div><h1>Painted Edges: a free stylized edge shader for Unreal Engine 5</h1><p class="short">Free stylized edge shader for UE5: hand-painted edges on any mesh as a drop-in Material Function. No UVs, no textures, no baking.</p>
  <ul class="facts"><li>Free</li><li>No UVs</li><li>No textures</li><li>No baking</li></ul>
  <div class="buy"><span class="price">Free</span><a class="btn btn-lime" href="../../go/web-producto/painted_edges/">Get it free on Fab</a></div>
- <p class="meta">Tested on Unreal Engine 5.5 and 5.8 · sold on Fab by RafaSC</p></div>
+ <p class="meta">Tested on Unreal Engine 5.5 and 5.8 · sold on Fab by RafaSC · Updated November 15, 2026</p></div>
 </div>
 <section aria-labelledby="hi"><h2 id="hi">What it is</h2><div class="intro"><p>Painted Edges is a free stylized edge shader for Unreal Engine 5. It paints a hand-painted band along every edge of your mesh - filled in the centre, fading outwards, broken up by wear that never leaves gaps. No UVs, no textures, no baking.</p><p>It ships as a drop-in Material Function: plug your own texture or colour in, take it out with painted edges on top. Every setting lives inside the function, so it shows up in the Material Instance of any material you add it to.</p></div></section>
 <section aria-labelledby="hs"><div class="cols"><div><h2 id="hs">Quick start</h2><ol class="list"><li>Open your material, right-click in the graph and type Painted Edges.</li><li>Add MF_PaintedEdges_Paint and connect your texture or colour to its Base Color input (and Roughness, optionally Emissive).</li><li>Connect its Base Color, Roughness and Emissive outputs to the material result node and save.</li><li>Create a Material Instance: all edge settings appear there, grouped.</li></ol></div>
@@ -74,8 +74,12 @@ details p{color:var(--muted);margin-top:10px;max-width:70ch}
 <section aria-labelledby="hf"><div class="cols"><div><h2 id="hf">What you get</h2><ul class="list"><li>Drop-in: MF_PaintedEdges_Paint goes between your inputs and your outputs</li><li>Material Attributes version (MF_PaintedEdges_Layer) for layered setups</li><li>Filled edges: the centre of every edge is always painted</li><li>Wear breaks up the width of the band, never the line itself</li><li>Real-edge detection keeps flat and sloped faces clean</li><li>Stable under TAA / TSR: no flickering 1-pixel lines</li><li>Object-space: the paint follows the actor when it rotates or moves</li><li>13 artist-friendly parameters, grouped and documented</li><li>6 colour presets + 2 example materials + a demo map with 7 stations</li></ul></div>
 <div><h2>Mesh requirements</h2><ul class="list"><li>Edges need a bevel OR smooth normals. On hard, split-normal edges there is nothing to paint: the shader fades them out on purpose.</li><li>Uniform actor scale gives the most accurate edge width.</li><li>Best on hard-surface meshes whose own pivot is aligned with the mesh axes. On organic or faceted shapes with a rotated pivot, extra edges can get paint.</li><li>Not compatible with the Path Tracer (it uses screen-space derivatives).</li></ul></div></div></section>
 <section aria-labelledby="hq"><h2 id="hq">Frequently asked questions</h2><details><summary>Why use this instead of painting the edges by hand?</summary><p>No UV unwrapping and no baking. You change one slider instead of re-exporting a texture, and it works on every mesh in your project at once.</p></details><details><summary>Does it work on my existing materials?</summary><p>Yes, that is what MF_PaintedEdges_Paint is for.</p></details><details><summary>Do I need to bevel my models?</summary><p>A bevel or smooth normals, yes. One segment is enough.</p></details><details><summary>Nanite and Lumen?</summary><p>Yes. The demo map uses Nanite meshes, Lumen and Virtual Shadow Maps.</p></details><details><summary>How expensive is it?</summary><p>The full example material is about 350 pixel-shader instructions in UE 5.5 (SM6), standard lighting included. The effect uses no textures.</p></details><details><summary>Commercial use?</summary><p>Yes, under the Fab license.</p></details></section>
+<div style="margin:clamp(28px,4vw,48px) 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px">
+<a class="btn btn-lime" href="../../go/web-producto/painted_edges/">Get it free on Fab</a>
+<a class="btn btn-ghost" href="../../go/web-producto/fiverr/">Hire me on Fiverr</a>
+</div>
 <section aria-labelledby="hm"><h2 id="hm">More stylized materials</h2><div class="more"><a href="../stylized-water/"><img src="../media/water2.webp" alt="Stylized Water material for Unreal Engine 5: the same island with different water presets" loading="lazy" width="1600" height="750"><b>Stylized Water Material</b><span>$29.99</span></a><a href="../see-through/"><img src="../media/seethrough.webp" alt="See-Through Occlusion: the roof opens around the character" loading="lazy" width="1600" height="750"><b>See-Through Occlusion</b><span>$12.99</span></a><a href="../toon-studio/"><img src="../media/toonstudio.webp" alt="Toon Studio: a tea house switching between toon styles" loading="lazy" width="1600" height="750"><b>Custom Toon Shaders Studio</b><span>$29.99</span></a><a href="../coverage/"><img src="../media/coverage.webp" alt="Snow and Moss Coverage: winter arrives on a log cabin" loading="lazy" width="1600" height="750"><b>Stylized Snow &amp; Moss Coverage</b><span>$14.99</span></a></div></section>
-<div class="hire"><div><h2>Need a prop or a whole world?</h2><p>I model, paint and render stylized 3D for games.</p></div><a class="btn" href="../../go/web-producto/fiverr/">Hire me on Fiverr</a></div>
+<div class="hire"><div><h2>Need a prop or a whole world?</h2><p>I model, paint and render stylized 3D for games.</p></div><a class="btn btn-ghost" href="../../go/web-producto/fiverr/">Hire me on Fiverr</a></div>
 </main>
 <footer class="foot"><span>RafaSC · stylized materials and 3D art · Barcelona</span><span><a href="../">Home</a><a href="../../guides/">Guides</a><a href="../../privacy.html">Privacy</a><a href="../../terms.html">Terms</a></span></footer>
 </div>

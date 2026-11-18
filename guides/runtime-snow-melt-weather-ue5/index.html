@@ -49,8 +49,8 @@ details p{color:var(--muted);margin-top:10px;max-width:70ch}
 .more a{display:block;text-decoration:none;border-radius:20px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
 .more img{aspect-ratio:32/15;object-fit:cover;width:100%}.more b{display:block;padding:12px 16px 2px;font-family:var(--display);font-size:18px}
 .more span{display:block;padding:0 16px 14px;color:var(--muted);font-size:14px}
-.hire{margin-top:clamp(48px,7vw,96px);padding:clamp(24px,4vw,48px);border-radius:28px;background:var(--lime);color:var(--ink);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
-.hire h2{margin:0;color:var(--ink)}.hire p{max-width:40ch}.hire .btn{background:var(--ink);color:var(--cream)}
+.hire{margin-top:clamp(48px,7vw,96px);padding:clamp(24px,4vw,48px);border-radius:28px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);color:var(--cream);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+.hire h2{margin:0}.hire p{max-width:40ch;color:var(--muted)}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:48px;padding:20px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 .foot a{color:var(--muted);margin-left:16px}.foot a:hover{color:var(--cream)}
 @media(max-width:860px){.nav ul{display:none}.nav .btn{margin-left:auto}.hero{grid-template-columns:1fr;padding:12px 12px 22px}.hero>div:last-child{padding:0 8px}.cols{grid-template-columns:1fr}.more{grid-template-columns:repeat(2,minmax(0,1fr))}.foot a{margin:0 16px 0 0}}
@@ -67,6 +67,7 @@ th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px sol
 .cta{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin:30px 0;padding:22px 24px;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
 .cta p{margin:0}.cta .k{color:var(--lime);font:600 13px var(--text);letter-spacing:.06em;text-transform:uppercase}.cta .n{font-family:var(--display);font-weight:700;font-size:24px;margin:4px 0}
 .cta .n span{color:var(--lime);margin-left:8px}.cta .l{color:var(--muted);max-width:44ch}.cta .m{color:var(--muted);font-size:14px;margin-top:6px}.cta .b{display:flex;flex-wrap:wrap;gap:10px}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:16px 0 4px}.ctas span{color:var(--muted);font-size:15px}
 .rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.rel a{display:block;text-decoration:none;border-radius:18px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);padding:16px 18px}
 .rel b{display:block;font-family:var(--display);font-size:18px;line-height:1.2}.rel span{display:block;color:var(--muted);font-size:14px;margin-top:6px}
 .save{display:flex;gap:18px;align-items:center;margin-top:40px;padding:16px;border-radius:18px;box-shadow:inset 0 0 0 1px var(--line)}.save img{width:120px;height:auto;border-radius:10px}.save p{margin:0;color:var(--muted);font-size:15px}
@@ -81,7 +82,7 @@ iframe.yt{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;border
 @media(max-width:860px){.rel{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.cta .b{width:100%}.cta .btn{flex:1 1 auto}}
 </style><script data-goatcounter="https://rafasc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
 <body><div class="wrap">
-<header class="nav"><a class="brand" href="../../"><img src="../../v2/media/logo.webp" alt="" width="34" height="34">RafaSC</a><ul><li><a href="../../#materials">Materials</a></li><li><a href="../../guides/">Guides</a></li><li><a href="../../#work">Work</a></li></ul><a class="btn btn-lime" href="../../go/web-guia/fiverr/">Hire me</a></header>
+<header class="nav"><a class="brand" href="../../"><img src="../../v2/media/logo.webp" alt="" width="34" height="34">RafaSC</a><ul><li><a href="../../#materials">Materials</a></li><li><a href="../../guides/">Guides</a></li><li><a href="../../#work">Work</a></li></ul><a class="btn btn-ghost" href="../../go/web-guia/fiverr/">Hire me</a></header>
 <main><article class="art">
 <nav class="crumb" aria-label="Breadcrumb"><a href="../../">RafaSC</a> › <a href="../">Guides</a> › Runtime Snow and Melt Zones in Unreal Engine 5</nav>
 <p class="kick">Snow and moss</p>
@@ -89,6 +90,7 @@ iframe.yt{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;border
 <p class="ans">Runtime snow in Unreal Engine 5 is one global number that every snow material reads: raise it and winter arrives, lower it and the snow melts. Put that number in a Material Parameter Collection and any Blueprint can drive it. A second parameter with a position and a radius gives you melt zones around a campfire or the player.</p>
 <p class="by">By <a href="../../#about">RafaSC</a>, 3D and technical artist · Updated <time datetime="2026-11-15">November 15, 2026</time> · 5 min read</p>
 <div class="media" id="m" data-base="../../v2/media/" data-clip="coverage" data-m="1"><img src="../../v2/media/coverage.webp" srcset="../../v2/media/coverage_m.webp 960w, ../../v2/media/coverage.webp 1600w" sizes="(max-width:860px) 92vw, 760px" alt="Snow and Moss Coverage: winter arrives on a log cabin" width="1600" height="750" fetchpriority="high"><video muted playsinline loop preload="none" aria-hidden="true"></video><button class="pause" id="pz" type="button" hidden>Pause video</button></div>
+<div class="ctas"><a class="btn btn-lime" href="../../go/web-guia/coverage/">Get it on Fab</a><span>Stylized Snow &amp; Moss Coverage · $14.99</span></div>
 <h2 id="one-number-for-the-whole-level">One number for the whole level</h2>
 <p>A Material Parameter Collection (MPC) is a set of values that many materials can read at once. If every snow material multiplies its amount by the same MPC value, changing that value changes the whole level, with no loop over actors and no material instances to update.</p>
 <p>In Surface Coverage that collection is <code>MPC_Coverage</code>. From any Blueprint or weather system: <strong>Set Scalar Parameter Value</strong>, Collection <code>MPC_Coverage</code>, Parameter <code>Global Amount</code>, value 0 to 1.</p>
@@ -110,6 +112,7 @@ iframe.yt{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;border
 <p class="ytcap">Stylized Snow &amp; Moss Coverage for Unreal Engine 5: painted over any material · <a href="https://www.youtube.com/watch?v=DY6UCYBVvLE" rel="noopener">Watch on YouTube</a></p>
 <h2 id="faq">Frequently asked questions</h2>
 <details><summary>How do I change snow amount at runtime in Unreal Engine 5?</summary><p>Drive one value in a Material Parameter Collection that all snow materials read. With Surface Coverage: Set Scalar Parameter Value on MPC_Coverage, parameter Global Amount, from 0 to 1. Or place BP_CoverageWeather and set Coverage Amount.</p></details><details><summary>Can snow melt around a campfire or the player?</summary><p>Yes. Attach BP_CoverageClearZone to that actor and set Radius. Two zones can be active at once.</p></details><details><summary>Can I animate the snow in Sequencer?</summary><p>Yes. Coverage Amount on BP_CoverageWeather is exposed to cinematics, so a Level Sequence can change it.</p></details><details><summary>Does runtime weather cost performance?</summary><p>The Blueprints only write a Material Parameter Collection. There is no tick in the material.</p></details>
+<aside class="cta" aria-label="The shortcut"><div><p class="k">The shortcut</p><p class="n">Stylized Snow &amp; Moss Coverage <span>$14.99</span></p><p class="l">Painted snow, moss, autumn leaves, sand and frost on top of any material - with real volume, runtime weather and melt zones that follow your actors.</p><p class="m">On Fab · tested on Unreal Engine 5.5 and 5.8</p></div><div class="b"><a class="btn btn-lime" href="../../go/web-guia/coverage/">Get it on Fab</a><a class="btn btn-ghost" href="../../v2/coverage/">Details and FAQ</a></div></aside>
 <h2 id="more">Related guides</h2>
 <div class="rel"><a href="../snow-moss-on-any-mesh-ue5/"><b>Add Snow or Moss on Top of Any Mesh in UE5</b><span>7 min read</span></a><a href="../stylized-water-ue5/"><b>How to Make Stylized Water in Unreal Engine 5</b><span>6 min read</span></a><a href="../free-ue5-materials/"><b>Free UE5 Materials: Painted Edges and a Toon Shader</b><span>3 min read</span></a></div>
 <div class="save"><img src="../img/pin-runtime-snow-melt-weather-ue5.jpg" alt="Runtime Snow and Melt Zones in Unreal Engine 5: summary image for Pinterest" width="1000" height="1500" loading="lazy" decoding="async"><p>Save this guide for later. Product used on this page: <a href="../../v2/coverage/">Stylized Snow &amp; Moss Coverage</a>.</p></div>
