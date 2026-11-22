@@ -16,7 +16,7 @@ En cuanto se publique, se añade arriba del todo como primer botón.
 
 ## Publicada y funcionando en
 
-**https://rafucos.github.io/rafasc-links/**  (GitHub Pages, sin marcas de agua)
+**https://rafasc.dev/**  (GitHub Pages, sin marcas de agua)
 
 Repositorio: https://github.com/RafucoS/rafasc-links (rama `main`, carpeta raíz).
 Para cambiar la página: editar `index.html`, `git commit` y `git push`; Pages se actualiza solo en 1-2 min.
