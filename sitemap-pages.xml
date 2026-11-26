@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://rafasc.dev/</loc><lastmod>2026-11-18</lastmod></url>
-<url><loc>https://rafasc.dev/v2/stylized-water/</loc><lastmod>2026-11-18</lastmod></url>
-<url><loc>https://rafasc.dev/v2/see-through/</loc><lastmod>2026-11-18</lastmod></url>
-<url><loc>https://rafasc.dev/v2/toon-studio/</loc><lastmod>2026-11-18</lastmod></url>
-<url><loc>https://rafasc.dev/v2/coverage/</loc><lastmod>2026-11-18</lastmod></url>
-<url><loc>https://rafasc.dev/v2/painted-edges/</loc><lastmod>2026-11-18</lastmod></url>
-<url><loc>https://rafasc.dev/guides/</loc><lastmod>2026-11-18</lastmod></url>
+<url><loc>https://rafasc.dev/</loc><lastmod>2026-11-26</lastmod></url>
+<url><loc>https://rafasc.dev/v2/stylized-water/</loc><lastmod>2026-11-26</lastmod></url>
+<url><loc>https://rafasc.dev/v2/rope-kit/</loc><lastmod>2026-11-26</lastmod></url>
+<url><loc>https://rafasc.dev/v2/see-through/</loc><lastmod>2026-11-26</lastmod></url>
+<url><loc>https://rafasc.dev/v2/toon-studio/</loc><lastmod>2026-11-26</lastmod></url>
+<url><loc>https://rafasc.dev/v2/coverage/</loc><lastmod>2026-11-26</lastmod></url>
+<url><loc>https://rafasc.dev/v2/painted-edges/</loc><lastmod>2026-11-26</lastmod></url>
+<url><loc>https://rafasc.dev/guides/</loc><lastmod>2026-11-26</lastmod></url>
 <url><loc>https://rafasc.dev/guides/stylized-water-ue5/</loc><lastmod>2026-11-23</lastmod></url>
+<url><loc>https://rafasc.dev/guides/rope-physics-unreal-engine-5/</loc><lastmod>2026-11-26</lastmod></url>
+<url><loc>https://rafasc.dev/guides/rope-swing-climb-unreal-engine-5/</loc><lastmod>2026-11-26</lastmod></url>
 <url><loc>https://rafasc.dev/guides/see-player-through-walls-unreal/</loc><lastmod>2026-11-23</lastmod></url>
 <url><loc>https://rafasc.dev/guides/free-toon-shader-unreal-engine-5-8/</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://rafasc.dev/guides/ue-5-8-toon-shader-vs-post-process/</loc><lastmod>2026-11-18</lastmod></url>
